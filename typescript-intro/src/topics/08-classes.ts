@@ -1,13 +1,15 @@
 export class Person {
-    public name: string ;
-    public address: string;
+    // public name: string;
+    // public address: string;
 
-    constructor(){
-        this.name = 'Fernando'
-        this.address = 'New York'
+    constructor(
+        public name: string, 
+        private address: string = 'No Address'){//para usar, tienes que modificar tsconfig.json
+       this.name=name;
+       this.address=address;
 
     }
 }
 
-const ironman = new Person();
-console.log(ironman.name);
+const ironman = new Person('Superman','Orlando');
+console.log(ironman);
